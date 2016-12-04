@@ -1,14 +1,16 @@
+// hicat robot demo
+// get SerialCommand library from https://github.com/hicat-tech/Arduino-SerialCommand
 
 #include <Servo.h>
 #include <SerialCommand.h>
 
-int PWM1 = 9;   //control servo
-int PWM_CE = 11;  //servo enable
+int PWM1 = 9;     // control servo
+int PWM_CE = 11;  // servo enable
 
-int AIN1 = 4;  //control motor
-int AIN2 = 5;  //control motor
-int AIN3 = 6;  //control motor
-int AIN4 = 7;  //control motor
+int AIN1 = 4;  // control motor1
+int AIN2 = 5;  // control motor1
+int AIN3 = 6;  // control motor2
+int AIN4 = 7;  // control motor2
 
 int BIN3 = A2;  //control laser
 int BIN4 = A3;  //control laser
@@ -55,7 +57,7 @@ void setup() {
 
 // the loop routine runs over and over again forever:
 void loop() {
-  sCmd.readSerial();
+  sCmd.readSerial((Stream&)Serial1);
 }
 
 void trigger_laser()
@@ -156,5 +158,4 @@ void set_motor()
 void unrecognized(const char *command) {
   Serial.println('?');
 }
-
 
