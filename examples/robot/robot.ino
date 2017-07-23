@@ -4,13 +4,13 @@
 #include <Servo.h>
 #include <SerialCommand.h>
 
-int PWM1 = 9;     // control servo
+int PWM1 = 10;     // control servo
 int PWM_CE = 11;  // servo enable
 
 int AIN1 = 4;  // control motor1
 int AIN2 = 5;  // control motor1
 int AIN3 = 6;  // control motor2
-int AIN4 = 7;  // control motor2
+int AIN4 = 8;  // control motor2
 
 int BIN3 = A2;  //control laser
 int BIN4 = A3;  //control laser
